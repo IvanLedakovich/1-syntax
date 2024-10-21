@@ -1,1 +1,24 @@
-## CLI-программа, которая в качестве аргументов принимает список текстовых файлов и каждый обрабатывает в отдельном потоке следующим образом: читает текст и выводит его содержимое терминал, сохраняет текст в виде картинки (формат и директория для сохранения также указываются в аргументах командной строки при запуске программы). У программы нет зависимостей, только свои .java-файлы, которые скомпилированы в .class файлы и запускаемы. Программа принимает аргументы в следующем порядке: первый аргумент - тип файла изображения без точки, второй - путь для сохранения файлов изображений, третий - пути к исходным текстовым файлам.
+# Java CLI program converting text files into images
+
+**The program accepts .txt files as arguments, processes each one in a separate thread,
+reads .txt file, printing its contents in the terminal and saving them as images according 
+to type and directory provided as arguments. The program has no external dependencies.**
+
+## How to run the program:
+1. Compile the java file into a .class file using the following terminal command in the file location:
+   ```
+   javac Main.java
+   ```
+2. Add the arguments and then run the program:
+   ```
+   java Main *arguments*
+   ```
+   The program accepts 3 arguments:
+   1. Image type (png, jpg, etc.)
+   2. Image save destination (e.g. D:\Games)
+   3. Initial .txt files separated by space (e.g. D:\test.txt D:\test1.txt etc.)
+
+   The full command could look like this:
+   ```
+   java Main "png" "D:\Games" "D:\test.txt" "D:\test1.txt" "D:\test2.txt"
+   ```
