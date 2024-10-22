@@ -14,8 +14,8 @@ public class Main {
 
     public static void handleThreading(String[] args){
         for(int i = 2; i < args.length; i++) {
-            MyThread myThread = new MyThread(args);
-            myThread.start();
+            Thread thread = new Thread(args);
+            thread.start();
         }
     }
 }
