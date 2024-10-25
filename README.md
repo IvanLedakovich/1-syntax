@@ -1,7 +1,7 @@
 # Java CLI program converting text files into images
 
 **The program accepts .txt files as arguments, processes each one in a separate thread,
-reads .txt file, printing its contents in the terminal and saving them as images according 
+reads .txt files, printing their contents in the terminal and saving them as images according 
 to type and directory provided as arguments. The program has no external dependencies.**
 
 ## How to run the program:
@@ -13,12 +13,12 @@ to type and directory provided as arguments. The program has no external depende
    ```
    java Main *arguments*
    ```
-   The program accepts 3 arguments:
-   1. Image type (png, jpg, etc.)
-   2. Image save destination (e.g. D:\Games)
-   3. Initial .txt files separated by space (e.g. D:\test.txt D:\test1.txt etc.)
+   The program accepts 3 arguments in any order:
+   1. "--file-type" + Image type ("png", "jpg", etc.)
+   2. "--save-location" + Image save destination (e.g. "D:\Games")
+   3. "--file-path" + Initial .txt files separated by space (e.g. "D:\test.txt" "D:\test1.txt" etc.)
 
    The full command could look like this:
    ```
-   java Main "png" "D:\Games" "D:\test.txt" "D:\test1.txt" "D:\test2.txt"
+   java Main "--file-type" "png" "--save-location" "D:\\Games" "--file-path" "D:\\test.txt" "D:\\test1.txt" "D:\\test2.txt"
    ```
