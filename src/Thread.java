@@ -1,36 +1,28 @@
 import java.awt.image.BufferedImage;
-import java.util.ArrayList;
+import java.util.List;
 
 public class Thread extends java.lang.Thread {
 
-    private int i;
     private String imageFileType;
     private String imageSaveLocation;
-    private ArrayList<String> textFilePath;
+    private String textFilePath;
 
-    public Thread(Parameters parameters, int i) {
-
-        this.i = i;
-        imageFileType = parameters.imageFileType;
-        imageSaveLocation = parameters.imageSaveLocation;
-        textFilePath = parameters.textFilePath;
+    public Thread(String imageFileType, String imageSaveLocation, String textFilePath) {
+        this.imageFileType = imageFileType;
+        this.imageSaveLocation = imageSaveLocation;
+        this.textFilePath = textFilePath;
     }
 
     @Override
     public void run() {
-        String data = FileReader.readFile(textFilePath.get(i));
+        String data = FileReader.readFile(textFilePath);
         BufferedImage image = ImageCreator.createImage(data);
-        ImageWriter.writeImage(image, imageFileType, imageSaveLocation, textFilePath.get(i));
+        ImageWriter.writeImage(image, imageFileType, imageSaveLocation, textFilePath);
     }
 
-    public static void handleThreading(String[] args) {
+    public static void startANewThread(String imageFileType, String imageSaveLocation, String textFilePath) {
 
-        Parameters parameters = ArgumentsParser.parseArguments(args);
-
-        for(int i = 0; i < parameters.textFilePath.size(); i++) {
-            Thread thread = new Thread(parameters, i);
+            Thread thread = new Thread(imageFileType, imageSaveLocation, textFilePath);
             thread.start();
-        }
     }
-
 }
