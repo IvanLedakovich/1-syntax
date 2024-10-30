@@ -3,7 +3,7 @@ import java.awt.image.BufferedImage;
 
 public class ImageCreator {
 
-    public static BufferedImage createImage(String data){
+    public static BufferedImage createImage(String data) {
         BufferedImage img = new BufferedImage(1, 1, BufferedImage.TYPE_INT_ARGB);
         Graphics2D g2d = img.createGraphics();
         Font font = new Font("Arial", Font.PLAIN, 48);

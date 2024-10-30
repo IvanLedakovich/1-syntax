@@ -5,7 +5,7 @@ import java.io.IOException;
 
 public class ImageWriter {
 
-    public static void writeImage(BufferedImage image, String imageFileType, String imageSaveLocation, String textFilePath){
+    public static void writeImage (BufferedImage image, String imageFileType, String imageSaveLocation, String textFilePath) {
         try {
             ImageIO.write(image, imageFileType, new File(imageSaveLocation + "\\" + textFilePath.substring(textFilePath.lastIndexOf("\\")+1) + "." + imageFileType));
         } catch (IOException e) {

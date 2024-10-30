@@ -19,13 +19,13 @@ public class ArgumentsParser {
             }
         }
 
-        for(int i = 0; i < parameters.getAllTextFilePaths().size(); i++){
+        for (int i = 0; i < parameters.getAllTextFilePaths().size(); i++) {
             Thread.startANewThread(parameters.getImageFileType(), parameters.getImageSaveLocation(), parameters.getSingleTextFilePath(i));
         }
         return parameters;
     }
 
-    private static List<String> parseFilePaths(String[] args, int i){
+    private static List<String> parseFilePaths(String[] args, int i) {
         List<String> textFilePaths = new ArrayList<String>();
 
         for (int j = i + 1; j < args.length; j++) {

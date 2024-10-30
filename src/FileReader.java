@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class FileReader {
 
-    public static String readFile(String filePath){
+    public static String readFile(String filePath) {
         File myObj = new File(filePath);
         String data = "";
         Scanner myReader = null;

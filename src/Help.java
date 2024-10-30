@@ -1,6 +1,6 @@
 public class Help {
 
-    public static void help(String arg0){
+    public static void help (String arg0) {
         if(arg0.equals("--help")){
             System.out.println(" The program must be provided with 3 arguments in any order:\n" +
                     "   1. \"--file-type\" + Image type (\"png\", \"jpg\", etc.)\n" +
