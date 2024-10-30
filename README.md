@@ -5,7 +5,7 @@ reads .txt files, printing their contents in the terminal and saving them as ima
 to type and directory provided as arguments. The program has no external dependencies.**
 
 ## How to run the program:
-1. Compile the java file into a .class file using the following terminal command in the file location:
+1. Compile the java files into .class files using the following terminal command in the file location:
    ```
    javac Main.java
    ```
