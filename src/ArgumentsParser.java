@@ -22,14 +22,14 @@ public class ArgumentsParser {
         return parameters;
     }
 
-    private static List<String> parseFilePaths(String[] args, int i) {
+    private static List<String> parseFilePaths(String[] args, int currentArgumentIndex) {
         List<String> textFilePaths = new ArrayList<String>();
 
-        for (int j = i + 1; j < args.length; j++) {
-            if (args[j].contains("--")) {
+        for (int i = currentArgumentIndex + 1; i < args.length; i++) {
+            if (args[i].contains("--")) {
                 break;
             } else {
-                textFilePaths.add(args[j]);
+                textFilePaths.add(args[i]);
             }
         }
         return textFilePaths;
