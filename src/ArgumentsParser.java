@@ -19,9 +19,6 @@ public class ArgumentsParser {
             }
         }
 
-        for (int i = 0; i < parameters.getAllTextFilePaths().size(); i++) {
-            Thread.startANewThread(parameters.getImageFileType(), parameters.getImageSaveLocation(), parameters.getSingleTextFilePath(i));
-        }
         return parameters;
     }
 
