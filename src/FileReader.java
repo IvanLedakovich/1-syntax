@@ -2,7 +2,24 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
+/**
+ * This class contains methods for reading files
+ *
+ * @author Ivan Ledakovich
+ *
+ */
+
 public class FileReader {
+
+    /**
+     * This method receives file path and returns the file in form of a String
+     *
+     * @param filePath String, containing path to base file
+     * @return file data in form of a String
+     *
+     * @author Ivan Ledakovich
+     *
+     */
 
     public static String readFile(String filePath) {
         File myObj = new File(filePath);

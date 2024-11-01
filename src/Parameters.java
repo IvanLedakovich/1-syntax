@@ -1,6 +1,13 @@
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This class describes the type to store the command line arguments in
+ *
+ * @author Ivan Ledakovich
+ *
+ */
+
 public class Parameters {
     private String imageFileType;
     private String imageSaveLocation;

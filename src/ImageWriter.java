@@ -3,7 +3,26 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
+/**
+ * This class contains the method which writes the generated image
+ *
+ * @author Ivan Ledakovich
+ *
+ */
+
 public class ImageWriter {
+
+    /**
+     * This method converts command line arguments into a Parameter class object
+     *
+     * @param image generated image
+     * @param imageFileType image file type for saving
+     * @param imageSaveLocation locations to save the image
+     * @param textFilePath the path to the initial .txt file
+     *
+     * @author Ivan Ledakovich
+     *
+     */
 
     public static void writeImage (BufferedImage image, String imageFileType, String imageSaveLocation, String textFilePath) {
         try {
