@@ -22,13 +22,12 @@ public class ArgumentsParser {
 
     public static Parameters parseArguments(String[] args) {
 
-        if(args[0].equals("--help")){
-            Help.help();
-        }
-
         Parameters parameters = new Parameters();
 
         for (int i = 0; i < args.length; i++) {
+            if(args[i].equals("--help")){
+                Help.help();
+            }
             if (args[i].equalsIgnoreCase("--file-type")) {
                 parameters.setImageFileType(args[i + 1]);
             }
